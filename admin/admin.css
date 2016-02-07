@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url(reset.css);
+body {
+    font-family: "MS PGothic","Osaka", Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-size: 100%;
+}
+
+/* -------Common class-----*/
+
+div,header,nav,ul,li,a,main,section,article,aside,h1,h2,h3,h4,h5,h6,p {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+/* clearfix */
+.clearfix:after{
+    display:block;	
+    content:'';
+    width:100%;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+/* clear */
+.clear {
+    clear:both;
+}
+
+/* -------End Common class-----*/
+
+.container {
+ width: 960px;
+min-height: 1000px;
+padding:40px;
+border:4px solid #22759B;
+border-radius: 40px;
+margin:60px auto 0 auto;    
+}
+
+.maintitle {
+text-align: center;
+border-bottom: 2px solid #ccc;
+padding-bottom: 40px;    
+}
+
+.subtitle {
+padding: 20px 0;
+}
+.content{
+border-bottom: 2px solid #ccc;
+padding: 10px 20px 40px 20px; 
+min-height: 400px;    
+}
+
+.input_title {
+ width:50%; 
+margin-bottom: 20px;    
+}
+
+.input_textarea {
+ width:80%;
+height:200px;    
+}
+
+.input p {
+ margin-bottom: 10px;   
+}
+
+input[type=submit]{
+width:80px;
+height: 30px;
+font-size: 1rem; 
+background-color: #22759B; 
+color:#fff;
+cursor: pointer;
+}
+
+/*投稿一覧*/
+
+.allpost {
+border-collapse: collapse;
+width:100%;    
+}
+
+.allpost,.allpost th,.allpost td {
+ border:1px solid #000;   
+}

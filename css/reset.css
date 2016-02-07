@@ -1,0 +1,39 @@
+@charset "UTF-8";
+fieldset, img {
+    border: 0 none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: outside none none;
+}
+.separate, .floatingw, legend {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+
+table {
+    font-size: inherit;
+}
+pre, code, kbd, samp, tt {
+    font-family: monospace;
+    line-height: 99%;
+}
+h1, h2, h3, h4, h5 {
+    font-size: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+
