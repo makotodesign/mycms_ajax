@@ -87,3 +87,14 @@ width:100%;
 .allpost,.allpost th,.allpost td {
  border:1px solid #000;   
 }
+
+#msg {
+position: fixed;
+bottom:300px;
+right:200px;
+display:inline-block;
+padding: 10px;
+background-color: #f88989;  
+color:#fff;    
+
+}
