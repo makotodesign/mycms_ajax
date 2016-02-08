@@ -1,12 +1,13 @@
+
 $(function(){
+  
     //ajax作戦
 
     //削除ロジック
-    var delbtn=$('.allpost').find('.delete'); 
-    delbtn.click(function(event){      
+    var delbtn=$('.delete'); 
+    delbtn.on('click',function(event){      
         var delid=$(event.target).attr('value'); 
-        var res=confirm('ID番号'+delid+'番の記事を削除します。よろしいですか？');//確認窓
-        if(res){
+
             $.ajax({
                 type:'POST',
                 url:'./delete.php',
@@ -15,11 +16,11 @@ $(function(){
                 }        
             });
             var delid='#tr'+delid;
-            $(delid).fadeOut(500);
-        }
-        if(!res){
-            return false;
-        }
+            $(delid).fadeOut(500,function(){
+                $(this).remove();
+            })
+ 
+       
     }); 
     
     //投稿ロジック
@@ -34,9 +35,9 @@ $(function(){
                 title:title,
                 content:content    
             },    
-            success:function(){
+            success:function(data){
                
-                $('#prev_table').load('prev_table.php'); 
+                $('#prev_table').find('tbody').prepend(data); 
             
             }    
         

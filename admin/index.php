@@ -37,6 +37,7 @@ $stmt=$dbh->query('SELECT * FROM posts ORDER BY new_date DESC');
         <h2 class="subtitle">投稿一覧から編集</h2>
         <div id="prev_table">
             <table class="allpost">
+               <thead>
                 <tr>
                     <th width="5%">ID</th>
                     <th width="10%">更新時間</th>
@@ -44,6 +45,8 @@ $stmt=$dbh->query('SELECT * FROM posts ORDER BY new_date DESC');
                     <th width="55%">本文</th>
                     <th width="10%">編集内容</th>                
                 </tr>
+                </thead>
+                <tbody>
                 <?php foreach($stmt as $post): ?>
                 <tr id="tr<?php echo $post['id'];?>">
                     <td><?php echo $post['id']; ?></td>
@@ -56,7 +59,7 @@ $stmt=$dbh->query('SELECT * FROM posts ORDER BY new_date DESC');
                     </td>
                 </tr>    
                 <?php endforeach; ?>
-
+                </tbody>
             </table>
         </div>
     </div>
